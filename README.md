@@ -4,4 +4,4 @@ Team-Project for Trustworthy AI Training
 ## TODO
 
 - [ ] upload ssh keys
-- [ ] upload kaggle data set
+- [X] upload kaggle data set
