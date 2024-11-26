@@ -57,7 +57,6 @@ class Dataset:
         """
         df = self.load_data_frame()
         # Map RainToday and RainTomorrow to No=0 and Yes=1
-        #df[COL_RAINTODAY, COL_RAINTOMORROW]=df[COL_RAINTODAY, COL_RAINTOMORROW].map({"No":0,"Yes":1})
         df[COL_RAINTODAY] = df[COL_RAINTODAY].map({"No": 0, "Yes": 1})
         df[COL_RAINTOMORROW] = df[COL_RAINTOMORROW].map({"No": 0, "Yes": 1})
         # Drop irrelevant columns
@@ -71,6 +70,9 @@ class Dataset:
         return df
 
     def hot_encode_data_frame(self):
+        """
+        :return: hot encoded Dataframe
+        """
         df = self.transform_data_frame()
         encoder = OneHotEncoder(drop='first', sparse_output=False)
         encoded_cols = encoder.fit_transform(df[ENCODER_LIST])
