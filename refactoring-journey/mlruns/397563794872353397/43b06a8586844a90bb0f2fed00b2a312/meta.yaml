@@ -1,0 +1,15 @@
+artifact_uri: file:///home/kai/Git/rainPredictionAustralia/refactoring-journey/mlruns/397563794872353397/43b06a8586844a90bb0f2fed00b2a312/artifacts
+end_time: 1732875958386
+entry_point_name: ''
+experiment_id: '397563794872353397'
+lifecycle_stage: active
+run_id: 43b06a8586844a90bb0f2fed00b2a312
+run_name: 20241129-112503-KNeighbors
+run_uuid: 43b06a8586844a90bb0f2fed00b2a312
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1732875941778
+status: 3
+tags: []
+user_id: kai

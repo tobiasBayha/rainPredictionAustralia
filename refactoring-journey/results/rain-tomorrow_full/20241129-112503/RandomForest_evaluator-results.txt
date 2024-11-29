@@ -1,0 +1,72 @@
+RainTomorrow: ClassificationEvalStats[accuracy=0.8575476710549619, balancedAccuracy=0.7280560696554549, precision[Yes]=0.7609462544096286, recall[Yes]=0.49952322571856694, F1[Yes]=0.603125, N=33878]
+
+
+SkLearnRandomForestVectorClassificationModel[
+    featureGenerator=MultiFeatureGenerator[
+        featureGenerators=[
+            FeatureGeneratorTakeColumns[
+                columns=[Humidity3pm, Humidity9am], 
+                exceptColumns=(), 
+                verifyColumnNames=True, 
+                name=WEATHER_DEGREES], 
+            FeatureGeneratorTakeColumns[
+                columns=[Location, WindGustDir, WindDir9am, WindDir3pm, RainToday], 
+                exceptColumns=(), 
+                verifyColumnNames=True, 
+                name=WEATHER_CATEGORIES], 
+            FeatureGeneratorTakeColumns[
+                columns=[MinTemp], 
+                exceptColumns=(), 
+                verifyColumnNames=True, 
+                name=MINTEMP], 
+            FeatureGeneratorTakeColumns[
+                columns=[MaxTemp], 
+                exceptColumns=(), 
+                verifyColumnNames=True, 
+                name=MAXTEMP], 
+            FeatureGeneratorTakeColumns[
+                columns=[Rainfall], 
+                exceptColumns=(), 
+                verifyColumnNames=True, 
+                name=RAINFALL], 
+            FeatureGeneratorTakeColumns[
+                columns=[WindGustSpeed], 
+                exceptColumns=(), 
+                verifyColumnNames=True, 
+                name=WINDGUSTSPEED], 
+            FeatureGeneratorTakeColumns[
+                columns=[WindSpeed9am], 
+                exceptColumns=(), 
+                verifyColumnNames=True, 
+                name=WINDSPEED9AM], 
+            FeatureGeneratorTakeColumns[
+                columns=[WindSpeed3pm], 
+                exceptColumns=(), 
+                verifyColumnNames=True, 
+                name=WINDSPEED3PM], 
+            FeatureGeneratorTakeColumns[
+                columns=[Pressure9am], 
+                exceptColumns=(), 
+                verifyColumnNames=True, 
+                name=PRESSURE9AM], 
+            FeatureGeneratorTakeColumns[
+                columns=[Pressure3pm], 
+                exceptColumns=(), 
+                verifyColumnNames=True, 
+                name=PRESSURE3PM], 
+            FeatureGeneratorTakeColumns[
+                columns=[Temp9am], 
+                exceptColumns=(), 
+                verifyColumnNames=True, 
+                name=TEMP9AM], 
+            FeatureGeneratorTakeColumns[
+                columns=[Temp3pm], 
+                exceptColumns=(), 
+                verifyColumnNames=True, 
+                name=TEMP3PM]]], 
+    fitArgs={}, 
+    useBalancedClassWeights=False, 
+    useLabelEncoding=False, 
+    featureGeneratorNames=[WEATHER_DEGREES, WEATHER_CATEGORIES, MINTEMP, MAXTEMP, RAINFALL, WINDGUSTSPEED, WINDSPEED9AM, WINDSPEED3PM, PRESSURE9AM, PRESSURE3PM, TEMP9AM, TEMP3PM], 
+    name=RandomForest, 
+    model=RandomForestClassifier(random_state=42)]

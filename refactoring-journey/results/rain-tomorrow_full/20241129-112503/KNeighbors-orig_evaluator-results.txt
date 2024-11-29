@@ -1,0 +1,15 @@
+RainTomorrow: ClassificationEvalStats[accuracy=0.7989550740893795, balancedAccuracy=0.6974545803961547, precision[Yes]=0.5374293785310734, recall[Yes]=0.5183217545293557, F1[Yes]=0.5277026558491089, N=33878]
+
+
+SkLearnKNeighborsVectorClassificationModel[
+    featureGenerator=FeatureGeneratorTakeColumns[
+        columns=[MinTemp, MaxTemp, Rainfall, WindGustSpeed, WindSpeed9am, WindSpeed3pm, Humidity9am, Humidity3pm, Pressure9am, Pressure3pm, Temp9am, Temp3pm], 
+        exceptColumns=(), 
+        verifyColumnNames=True, 
+        name=FeatureGeneratorTakeColumns-140302550301952], 
+    fitArgs={}, 
+    useBalancedClassWeights=False, 
+    useLabelEncoding=False, 
+    featureGeneratorNames=[FeatureGeneratorTakeColumns-140302550301952], 
+    name=KNeighbors-orig, 
+    model=KNeighborsClassifier(n_neighbors=1)]

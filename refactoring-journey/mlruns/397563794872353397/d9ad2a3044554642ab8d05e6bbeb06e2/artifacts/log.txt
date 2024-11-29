@@ -1,0 +1,234 @@
+INFO  2024-11-29 11:25:03,325 sensai.util.logging:add_file_logger - Logging to results/rain-tomorrow_full/20241129-112503/log.txt ...
+INFO  2024-11-29 11:25:03,325 raintomorrow.data:load_data_frame - Loading Dataset[num_samples=None, random_seed=42, class_positive=Yes, class_negative=No] from ../data/weatherAUS.csv
+INFO  2024-11-29 11:25:03,751 sensai.evaluation.eval_util:compare_models - Evaluating model 1/10 named 'LogisticRegression-orig' ...
+DEBUG 2024-11-29 11:25:03,787 sensai.evaluation.evaluator:__init__ - <sensai.data.DataSplitterFractional object at 0x7f9abba7f400> created split with 79047 (70.00%) and 33878 (30.00%) training and test data points respectively
+INFO  2024-11-29 11:25:03,787 sensai.evaluation.eval_util:perform_simple_evaluation - Evaluating SkLearnLogisticRegressionVectorClassificationModel[featureGenerator=FeatureGeneratorTakeColumns[columns=[MinTemp, MaxTemp, Rainfall, WindGustSpeed, WindSpeed9am, WindSpeed3pm, Humidity9am, Humidity3pm, Pressure9am, Pressure3pm, Temp9am, Temp3pm], exceptColumns=(), verifyColumnNames=True, name=FeatureGeneratorTakeColumns-140302566993552], fitArgs={}, useBalancedClassWeights=False, useLabelEncoding=False, featureGeneratorNames=[FeatureGeneratorTakeColumns-140302566993552], name=LogisticRegression-orig, modelConstructor=LogisticRegression(random_state=42, solver=lbfgs, max_iter=1000)] via <sensai.evaluation.evaluator.VectorClassificationModelEvaluator object at 0x7f9abba7f3d0>
+DEBUG 2024-11-29 11:25:03,843 git.cmd:execute - Popen(['git', 'version'], cwd=/home/kai/Git/rainPredictionAustralia/refactoring-journey, universal_newlines=False, shell=None, istream=None)
+DEBUG 2024-11-29 11:25:03,845 git.cmd:execute - Popen(['git', 'version'], cwd=/home/kai/Git/rainPredictionAustralia/refactoring-journey, universal_newlines=False, shell=None, istream=None)
+DEBUG 2024-11-29 11:25:03,849 git.cmd:execute - Popen(['git', 'cat-file', '--batch-check'], cwd=/home/kai/Git/rainPredictionAustralia, universal_newlines=False, shell=None, istream=<valid stream>)
+INFO  2024-11-29 11:25:03,860 sensai.vector_model:fit - Fitting SkLearnLogisticRegressionVectorClassificationModel instance
+DEBUG 2024-11-29 11:25:03,860 sensai.featuregen.feature_generator:generate - Generating features with FeatureGeneratorTakeColumns[columns=[MinTemp, MaxTemp, Rainfall, WindGustSpeed, WindSpeed9am, WindSpeed3pm, Humidity9am, Humidity3pm, Pressure9am, Pressure3pm, Temp9am, Temp3pm], exceptColumns=(), verifyColumnNames=True, name=FeatureGeneratorTakeColumns-140302566993552]
+DEBUG 2024-11-29 11:25:03,884 sensai.vector_model:fit - Fitting with outputs[1]=['RainTomorrow'], inputs[12]=[MinTemp/float64, MaxTemp/float64, Rainfall/float64, WindGustSpeed/float64, WindSpeed9am/float64, WindSpeed3pm/float64, Humidity9am/float64, Humidity3pm/float64, Pressure9am/float64, Pressure3pm/float64, Temp9am/float64, Temp3pm/float64]; N=79047 data points
+INFO  2024-11-29 11:25:03,887 sensai.sklearn.sklearn_base:_fit_classifier - Fitting sklearn classifier of type LogisticRegression
+INFO  2024-11-29 11:25:04,360 sensai.vector_model:fit - Fitting completed in 0.49 seconds: SkLearnLogisticRegressionVectorClassificationModel[featureGenerator=FeatureGeneratorTakeColumns[columns=[MinTemp, MaxTemp, Rainfall, WindGustSpeed, WindSpeed9am, WindSpeed3pm, Humidity9am, Humidity3pm, Pressure9am, Pressure3pm, Temp9am, Temp3pm], exceptColumns=(), verifyColumnNames=True, name=FeatureGeneratorTakeColumns-140302566993552], fitArgs={}, useBalancedClassWeights=False, useLabelEncoding=False, featureGeneratorNames=[FeatureGeneratorTakeColumns-140302566993552], name=LogisticRegression-orig, model=LogisticRegression(max_iter=1000, random_state=42)]
+DEBUG 2024-11-29 11:25:04,360 sensai.featuregen.feature_generator:generate - Generating features with FeatureGeneratorTakeColumns[columns=[MinTemp, MaxTemp, Rainfall, WindGustSpeed, WindSpeed9am, WindSpeed3pm, Humidity9am, Humidity3pm, Pressure9am, Pressure3pm, Temp9am, Temp3pm], exceptColumns=(), verifyColumnNames=True, name=FeatureGeneratorTakeColumns-140302566993552]
+INFO  2024-11-29 11:25:05,346 sensai.evaluation.eval_util:gather_results - Evaluation results for RainTomorrow: ClassificationEvalStats[accuracy=0.8492236849873074, balancedAccuracy=0.7209690497650054, precision[Yes]=0.7220123284947305, recall[Yes]=0.49461926168096987, F1[Yes]=0.5870654810024253, N=33878]
+INFO  2024-11-29 11:25:05,347 sensai.util.io.ResultWriter:write_text_file - Saving text file results/rain-tomorrow_full/20241129-112503/LogisticRegression-orig_evaluator-results.txt
+DEBUG 2024-11-29 11:25:05,754 PIL.PngImagePlugin:call - STREAM b'IHDR' 16 13
+DEBUG 2024-11-29 11:25:05,754 PIL.PngImagePlugin:call - STREAM b'sBIT' 41 4
+DEBUG 2024-11-29 11:25:05,754 PIL.PngImagePlugin:_open - b'sBIT' 41 4 (unknown)
+DEBUG 2024-11-29 11:25:05,754 PIL.PngImagePlugin:call - STREAM b'pHYs' 57 9
+DEBUG 2024-11-29 11:25:05,754 PIL.PngImagePlugin:call - STREAM b'IDAT' 78 1189
+DEBUG 2024-11-29 11:25:05,756 PIL.PngImagePlugin:call - STREAM b'IHDR' 16 13
+DEBUG 2024-11-29 11:25:05,756 PIL.PngImagePlugin:call - STREAM b'sBIT' 41 4
+DEBUG 2024-11-29 11:25:05,756 PIL.PngImagePlugin:_open - b'sBIT' 41 4 (unknown)
+DEBUG 2024-11-29 11:25:05,756 PIL.PngImagePlugin:call - STREAM b'pHYs' 57 9
+DEBUG 2024-11-29 11:25:05,756 PIL.PngImagePlugin:call - STREAM b'IDAT' 78 2994
+DEBUG 2024-11-29 11:25:05,774 PIL.PngImagePlugin:call - STREAM b'IHDR' 16 13
+DEBUG 2024-11-29 11:25:05,774 PIL.PngImagePlugin:call - STREAM b'sBIT' 41 4
+DEBUG 2024-11-29 11:25:05,774 PIL.PngImagePlugin:_open - b'sBIT' 41 4 (unknown)
+DEBUG 2024-11-29 11:25:05,774 PIL.PngImagePlugin:call - STREAM b'pHYs' 57 9
+DEBUG 2024-11-29 11:25:05,774 PIL.PngImagePlugin:call - STREAM b'IDAT' 78 374
+DEBUG 2024-11-29 11:25:05,775 PIL.PngImagePlugin:call - STREAM b'IHDR' 16 13
+DEBUG 2024-11-29 11:25:05,775 PIL.PngImagePlugin:call - STREAM b'sBIT' 41 4
+DEBUG 2024-11-29 11:25:05,775 PIL.PngImagePlugin:_open - b'sBIT' 41 4 (unknown)
+DEBUG 2024-11-29 11:25:05,775 PIL.PngImagePlugin:call - STREAM b'pHYs' 57 9
+DEBUG 2024-11-29 11:25:05,776 PIL.PngImagePlugin:call - STREAM b'IDAT' 78 286
+DEBUG 2024-11-29 11:25:05,777 PIL.PngImagePlugin:call - STREAM b'IHDR' 16 13
+DEBUG 2024-11-29 11:25:05,777 PIL.PngImagePlugin:call - STREAM b'sBIT' 41 4
+DEBUG 2024-11-29 11:25:05,777 PIL.PngImagePlugin:_open - b'sBIT' 41 4 (unknown)
+DEBUG 2024-11-29 11:25:05,777 PIL.PngImagePlugin:call - STREAM b'pHYs' 57 9
+DEBUG 2024-11-29 11:25:05,777 PIL.PngImagePlugin:call - STREAM b'IDAT' 78 263
+DEBUG 2024-11-29 11:25:05,779 PIL.PngImagePlugin:call - STREAM b'IHDR' 16 13
+DEBUG 2024-11-29 11:25:05,780 PIL.PngImagePlugin:call - STREAM b'sBIT' 41 4
+DEBUG 2024-11-29 11:25:05,780 PIL.PngImagePlugin:_open - b'sBIT' 41 4 (unknown)
+DEBUG 2024-11-29 11:25:05,780 PIL.PngImagePlugin:call - STREAM b'pHYs' 57 9
+DEBUG 2024-11-29 11:25:05,780 PIL.PngImagePlugin:call - STREAM b'IDAT' 78 387
+DEBUG 2024-11-29 11:25:05,781 PIL.PngImagePlugin:call - STREAM b'IHDR' 16 13
+DEBUG 2024-11-29 11:25:05,781 PIL.PngImagePlugin:call - STREAM b'sBIT' 41 4
+DEBUG 2024-11-29 11:25:05,781 PIL.PngImagePlugin:_open - b'sBIT' 41 4 (unknown)
+DEBUG 2024-11-29 11:25:05,781 PIL.PngImagePlugin:call - STREAM b'pHYs' 57 9
+DEBUG 2024-11-29 11:25:05,782 PIL.PngImagePlugin:call - STREAM b'IDAT' 78 436
+DEBUG 2024-11-29 11:25:05,783 PIL.PngImagePlugin:call - STREAM b'IHDR' 16 13
+DEBUG 2024-11-29 11:25:05,783 PIL.PngImagePlugin:call - STREAM b'sBIT' 41 4
+DEBUG 2024-11-29 11:25:05,783 PIL.PngImagePlugin:_open - b'sBIT' 41 4 (unknown)
+DEBUG 2024-11-29 11:25:05,783 PIL.PngImagePlugin:call - STREAM b'pHYs' 57 9
+DEBUG 2024-11-29 11:25:05,783 PIL.PngImagePlugin:call - STREAM b'IDAT' 78 351
+DEBUG 2024-11-29 11:25:05,785 PIL.PngImagePlugin:call - STREAM b'IHDR' 16 13
+DEBUG 2024-11-29 11:25:05,785 PIL.PngImagePlugin:call - STREAM b'sBIT' 41 4
+DEBUG 2024-11-29 11:25:05,785 PIL.PngImagePlugin:_open - b'sBIT' 41 4 (unknown)
+DEBUG 2024-11-29 11:25:05,785 PIL.PngImagePlugin:call - STREAM b'pHYs' 57 9
+DEBUG 2024-11-29 11:25:05,785 PIL.PngImagePlugin:call - STREAM b'IDAT' 78 364
+INFO  2024-11-29 11:25:05,876 sensai.util.io.ResultWriter:write_figure - Saving figure results/rain-tomorrow_full/20241129-112503/LogisticRegression-orig_confusion-matrix-rel.png
+DEBUG 2024-11-29 11:25:06,319 PIL.PngImagePlugin:call - STREAM b'IHDR' 16 13
+DEBUG 2024-11-29 11:25:06,319 PIL.PngImagePlugin:call - STREAM b'sBIT' 41 4
+DEBUG 2024-11-29 11:25:06,319 PIL.PngImagePlugin:_open - b'sBIT' 41 4 (unknown)
+DEBUG 2024-11-29 11:25:06,319 PIL.PngImagePlugin:call - STREAM b'pHYs' 57 9
+DEBUG 2024-11-29 11:25:06,319 PIL.PngImagePlugin:call - STREAM b'IDAT' 78 1189
+DEBUG 2024-11-29 11:25:06,320 PIL.PngImagePlugin:call - STREAM b'IHDR' 16 13
+DEBUG 2024-11-29 11:25:06,320 PIL.PngImagePlugin:call - STREAM b'sBIT' 41 4
+DEBUG 2024-11-29 11:25:06,320 PIL.PngImagePlugin:_open - b'sBIT' 41 4 (unknown)
+DEBUG 2024-11-29 11:25:06,320 PIL.PngImagePlugin:call - STREAM b'pHYs' 57 9
+DEBUG 2024-11-29 11:25:06,320 PIL.PngImagePlugin:call - STREAM b'IDAT' 78 2994
+DEBUG 2024-11-29 11:25:06,334 PIL.PngImagePlugin:call - STREAM b'IHDR' 16 13
+DEBUG 2024-11-29 11:25:06,334 PIL.PngImagePlugin:call - STREAM b'sBIT' 41 4
+DEBUG 2024-11-29 11:25:06,334 PIL.PngImagePlugin:_open - b'sBIT' 41 4 (unknown)
+DEBUG 2024-11-29 11:25:06,334 PIL.PngImagePlugin:call - STREAM b'pHYs' 57 9
+DEBUG 2024-11-29 11:25:06,334 PIL.PngImagePlugin:call - STREAM b'IDAT' 78 374
+DEBUG 2024-11-29 11:25:06,335 PIL.PngImagePlugin:call - STREAM b'IHDR' 16 13
+DEBUG 2024-11-29 11:25:06,335 PIL.PngImagePlugin:call - STREAM b'sBIT' 41 4
+DEBUG 2024-11-29 11:25:06,335 PIL.PngImagePlugin:_open - b'sBIT' 41 4 (unknown)
+DEBUG 2024-11-29 11:25:06,335 PIL.PngImagePlugin:call - STREAM b'pHYs' 57 9
+DEBUG 2024-11-29 11:25:06,335 PIL.PngImagePlugin:call - STREAM b'IDAT' 78 286
+DEBUG 2024-11-29 11:25:06,336 PIL.PngImagePlugin:call - STREAM b'IHDR' 16 13
+DEBUG 2024-11-29 11:25:06,336 PIL.PngImagePlugin:call - STREAM b'sBIT' 41 4
+DEBUG 2024-11-29 11:25:06,337 PIL.PngImagePlugin:_open - b'sBIT' 41 4 (unknown)
+DEBUG 2024-11-29 11:25:06,337 PIL.PngImagePlugin:call - STREAM b'pHYs' 57 9
+DEBUG 2024-11-29 11:25:06,337 PIL.PngImagePlugin:call - STREAM b'IDAT' 78 263
+DEBUG 2024-11-29 11:25:06,338 PIL.PngImagePlugin:call - STREAM b'IHDR' 16 13
+DEBUG 2024-11-29 11:25:06,338 PIL.PngImagePlugin:call - STREAM b'sBIT' 41 4
+DEBUG 2024-11-29 11:25:06,339 PIL.PngImagePlugin:_open - b'sBIT' 41 4 (unknown)
+DEBUG 2024-11-29 11:25:06,339 PIL.PngImagePlugin:call - STREAM b'pHYs' 57 9
+DEBUG 2024-11-29 11:25:06,339 PIL.PngImagePlugin:call - STREAM b'IDAT' 78 387
+DEBUG 2024-11-29 11:25:06,340 PIL.PngImagePlugin:call - STREAM b'IHDR' 16 13
+DEBUG 2024-11-29 11:25:06,340 PIL.PngImagePlugin:call - STREAM b'sBIT' 41 4
+DEBUG 2024-11-29 11:25:06,340 PIL.PngImagePlugin:_open - b'sBIT' 41 4 (unknown)
+DEBUG 2024-11-29 11:25:06,340 PIL.PngImagePlugin:call - STREAM b'pHYs' 57 9
+DEBUG 2024-11-29 11:25:06,340 PIL.PngImagePlugin:call - STREAM b'IDAT' 78 436
+DEBUG 2024-11-29 11:25:06,341 PIL.PngImagePlugin:call - STREAM b'IHDR' 16 13
+DEBUG 2024-11-29 11:25:06,342 PIL.PngImagePlugin:call - STREAM b'sBIT' 41 4
+DEBUG 2024-11-29 11:25:06,342 PIL.PngImagePlugin:_open - b'sBIT' 41 4 (unknown)
+DEBUG 2024-11-29 11:25:06,342 PIL.PngImagePlugin:call - STREAM b'pHYs' 57 9
+DEBUG 2024-11-29 11:25:06,342 PIL.PngImagePlugin:call - STREAM b'IDAT' 78 351
+DEBUG 2024-11-29 11:25:06,343 PIL.PngImagePlugin:call - STREAM b'IHDR' 16 13
+DEBUG 2024-11-29 11:25:06,343 PIL.PngImagePlugin:call - STREAM b'sBIT' 41 4
+DEBUG 2024-11-29 11:25:06,343 PIL.PngImagePlugin:_open - b'sBIT' 41 4 (unknown)
+DEBUG 2024-11-29 11:25:06,343 PIL.PngImagePlugin:call - STREAM b'pHYs' 57 9
+DEBUG 2024-11-29 11:25:06,343 PIL.PngImagePlugin:call - STREAM b'IDAT' 78 364
+INFO  2024-11-29 11:25:06,409 sensai.util.io.ResultWriter:write_figure - Saving figure results/rain-tomorrow_full/20241129-112503/LogisticRegression-orig_confusion-matrix-abs.png
+INFO  2024-11-29 11:25:07,164 sensai.evaluation.eval_util:compare_models - Evaluating model 2/10 named 'LogisticRegression' ...
+INFO  2024-11-29 11:25:07,165 sensai.evaluation.eval_util:perform_simple_evaluation - Evaluating SkLearnLogisticRegressionVectorClassificationModel[featureGenerator=MultiFeatureGenerator[featureGenerators=[FeatureGeneratorTakeColumns[columns=[Humidity3pm, Humidity9am], exceptColumns=(), verifyColumnNames=True, name=WEATHER_DEGREES], FeatureGeneratorTakeColumns[columns=[Location, WindGustDir, WindDir9am, WindDir3pm, RainToday], exceptColumns=(), verifyColumnNames=True, name=WEATHER_CATEGORIES], FeatureGeneratorTakeColumns[columns=[MinTemp], exceptColumns=(), verifyColumnNames=True, name=MINTEMP], FeatureGeneratorTakeColumns[columns=[MaxTemp], exceptColumns=(), verifyColumnNames=True, name=MAXTEMP], FeatureGeneratorTakeColumns[columns=[Rainfall], exceptColumns=(), verifyColumnNames=True, name=RAINFALL], FeatureGeneratorTakeColumns[columns=[WindGustSpeed], exceptColumns=(), verifyColumnNames=True, name=WINDGUSTSPEED], FeatureGeneratorTakeColumns[columns=[WindSpeed9am], exceptColumns=(), verifyColumnNames=True, name=WINDSPEED9AM], FeatureGeneratorTakeColumns[columns=[WindSpeed3pm], exceptColumns=(), verifyColumnNames=True, name=WINDSPEED3PM], FeatureGeneratorTakeColumns[columns=[Pressure9am], exceptColumns=(), verifyColumnNames=True, name=PRESSURE9AM], FeatureGeneratorTakeColumns[columns=[Pressure3pm], exceptColumns=(), verifyColumnNames=True, name=PRESSURE3PM], FeatureGeneratorTakeColumns[columns=[Temp9am], exceptColumns=(), verifyColumnNames=True, name=TEMP9AM], FeatureGeneratorTakeColumns[columns=[Temp3pm], exceptColumns=(), verifyColumnNames=True, name=TEMP3PM]]], fitArgs={}, useBalancedClassWeights=False, useLabelEncoding=False, featureGeneratorNames=[WEATHER_DEGREES, WEATHER_CATEGORIES, MINTEMP, MAXTEMP, RAINFALL, WINDGUSTSPEED, WINDSPEED9AM, WINDSPEED3PM, PRESSURE9AM, PRESSURE3PM, TEMP9AM, TEMP3PM], name=LogisticRegression, modelConstructor=LogisticRegression(random_state=42, solver=lbfgs, max_iter=1000)] via <sensai.evaluation.evaluator.VectorClassificationModelEvaluator object at 0x7f9abba7f3d0>
+INFO  2024-11-29 11:25:07,175 sensai.vector_model:fit - Fitting SkLearnLogisticRegressionVectorClassificationModel instance
+DEBUG 2024-11-29 11:25:07,176 sensai.featuregen.feature_generator:fit_generate - Fitting and generating features with MultiFeatureGenerator[featureGenerators=[FeatureGeneratorTakeColumns[columns=[Humidity3pm, Humidity9am], exceptColumns=(), verifyColumnNames=True, name=WEATHER_DEGREES], FeatureGeneratorTakeColumns[columns=[Location, WindGustDir, WindDir9am, WindDir3pm, RainToday], exceptColumns=(), verifyColumnNames=True, name=WEATHER_CATEGORIES], FeatureGeneratorTakeColumns[columns=[MinTemp], exceptColumns=(), verifyColumnNames=True, name=MINTEMP], FeatureGeneratorTakeColumns[columns=[MaxTemp], exceptColumns=(), verifyColumnNames=True, name=MAXTEMP], FeatureGeneratorTakeColumns[columns=[Rainfall], exceptColumns=(), verifyColumnNames=True, name=RAINFALL], FeatureGeneratorTakeColumns[columns=[WindGustSpeed], exceptColumns=(), verifyColumnNames=True, name=WINDGUSTSPEED], FeatureGeneratorTakeColumns[columns=[WindSpeed9am], exceptColumns=(), verifyColumnNames=True, name=WINDSPEED9AM], FeatureGeneratorTakeColumns[columns=[WindSpeed3pm], exceptColumns=(), verifyColumnNames=True, name=WINDSPEED3PM], FeatureGeneratorTakeColumns[columns=[Pressure9am], exceptColumns=(), verifyColumnNames=True, name=PRESSURE9AM], FeatureGeneratorTakeColumns[columns=[Pressure3pm], exceptColumns=(), verifyColumnNames=True, name=PRESSURE3PM], FeatureGeneratorTakeColumns[columns=[Temp9am], exceptColumns=(), verifyColumnNames=True, name=TEMP9AM], FeatureGeneratorTakeColumns[columns=[Temp3pm], exceptColumns=(), verifyColumnNames=True, name=TEMP3PM]]]
+DEBUG 2024-11-29 11:25:07,176 sensai.featuregen.feature_generator:generate - Generating features with FeatureGeneratorTakeColumns[columns=[Humidity3pm, Humidity9am], exceptColumns=(), verifyColumnNames=True, name=WEATHER_DEGREES]
+DEBUG 2024-11-29 11:25:07,177 sensai.featuregen.feature_generator:generate - Generating features with FeatureGeneratorTakeColumns[columns=[Location, WindGustDir, WindDir9am, WindDir3pm, RainToday], exceptColumns=(), verifyColumnNames=True, name=WEATHER_CATEGORIES]
+DEBUG 2024-11-29 11:25:07,201 sensai.featuregen.feature_generator:generate - Generating features with FeatureGeneratorTakeColumns[columns=[MinTemp], exceptColumns=(), verifyColumnNames=True, name=MINTEMP]
+DEBUG 2024-11-29 11:25:07,202 sensai.featuregen.feature_generator:generate - Generating features with FeatureGeneratorTakeColumns[columns=[MaxTemp], exceptColumns=(), verifyColumnNames=True, name=MAXTEMP]
+DEBUG 2024-11-29 11:25:07,203 sensai.featuregen.feature_generator:generate - Generating features with FeatureGeneratorTakeColumns[columns=[Rainfall], exceptColumns=(), verifyColumnNames=True, name=RAINFALL]
+DEBUG 2024-11-29 11:25:07,204 sensai.featuregen.feature_generator:generate - Generating features with FeatureGeneratorTakeColumns[columns=[WindGustSpeed], exceptColumns=(), verifyColumnNames=True, name=WINDGUSTSPEED]
+DEBUG 2024-11-29 11:25:07,205 sensai.featuregen.feature_generator:generate - Generating features with FeatureGeneratorTakeColumns[columns=[WindSpeed9am], exceptColumns=(), verifyColumnNames=True, name=WINDSPEED9AM]
+DEBUG 2024-11-29 11:25:07,206 sensai.featuregen.feature_generator:generate - Generating features with FeatureGeneratorTakeColumns[columns=[WindSpeed3pm], exceptColumns=(), verifyColumnNames=True, name=WINDSPEED3PM]
+DEBUG 2024-11-29 11:25:07,206 sensai.featuregen.feature_generator:generate - Generating features with FeatureGeneratorTakeColumns[columns=[Pressure9am], exceptColumns=(), verifyColumnNames=True, name=PRESSURE9AM]
+DEBUG 2024-11-29 11:25:07,207 sensai.featuregen.feature_generator:generate - Generating features with FeatureGeneratorTakeColumns[columns=[Pressure3pm], exceptColumns=(), verifyColumnNames=True, name=PRESSURE3PM]
+DEBUG 2024-11-29 11:25:07,208 sensai.featuregen.feature_generator:generate - Generating features with FeatureGeneratorTakeColumns[columns=[Temp9am], exceptColumns=(), verifyColumnNames=True, name=TEMP9AM]
+DEBUG 2024-11-29 11:25:07,209 sensai.featuregen.feature_generator:generate - Generating features with FeatureGeneratorTakeColumns[columns=[Temp3pm], exceptColumns=(), verifyColumnNames=True, name=TEMP3PM]
+DEBUG 2024-11-29 11:25:08,033 sensai.vector_model:fit - Fitting with outputs[1]=['RainTomorrow'], inputs[106]=[Humidity3pm/float64, Humidity9am/float64, MinTemp/float64, MaxTemp/float64, Rainfall/float64, WindGustSpeed/float64, WindSpeed9am/float64, WindSpeed3pm/float64, Pressure9am/float64, Pressure3pm/float64, Temp9am/float64, Temp3pm/float64, Location_0/float64, Location_1/float64, Location_2/float64, Location_3/float64, Location_4/float64, Location_5/float64, Location_6/float64, Location_7/float64, Location_8/float64, Location_9/float64, Location_10/float64, Location_11/float64, Location_12/float64, Location_13/float64, Location_14/float64, Location_15/float64, Location_16/float64, Location_17/float64, Location_18/float64, Location_19/float64, Location_20/float64, Location_21/float64, Location_22/float64, Location_23/float64, Location_24/float64, Location_25/float64, Location_26/float64, Location_27/float64, Location_28/float64, Location_29/float64, Location_30/float64, Location_31/float64, Location_32/float64, Location_33/float64, Location_34/float64, Location_35/float64, Location_36/float64, Location_37/float64, Location_38/float64, Location_39/float64, Location_40/float64, Location_41/float64, Location_42/float64, Location_43/float64, WindGustDir_0/float64, WindGustDir_1/float64, WindGustDir_2/float64, WindGustDir_3/float64, WindGustDir_4/float64, WindGustDir_5/float64, WindGustDir_6/float64, WindGustDir_7/float64, WindGustDir_8/float64, WindGustDir_9/float64, WindGustDir_10/float64, WindGustDir_11/float64, WindGustDir_12/float64, WindGustDir_13/float64, WindGustDir_14/float64, WindGustDir_15/float64, WindDir9am_0/float64, WindDir9am_1/float64, WindDir9am_2/float64, WindDir9am_3/float64, WindDir9am_4/float64, WindDir9am_5/float64, WindDir9am_6/float64, WindDir9am_7/float64, WindDir9am_8/float64, WindDir9am_9/float64, WindDir9am_10/float64, WindDir9am_11/float64, WindDir9am_12/float64, WindDir9am_13/float64, WindDir9am_14/float64, WindDir9am_15/float64, WindDir3pm_0/float64, WindDir3pm_1/float64, WindDir3pm_2/float64, WindDir3pm_3/float64, WindDir3pm_4/float64, WindDir3pm_5/float64, WindDir3pm_6/float64, WindDir3pm_7/float64, WindDir3pm_8/float64, WindDir3pm_9/float64, WindDir3pm_10/float64, WindDir3pm_11/float64, WindDir3pm_12/float64, WindDir3pm_13/float64, WindDir3pm_14/float64, WindDir3pm_15/float64, RainToday_0/float64, RainToday_1/float64]; N=79047 data points
+INFO  2024-11-29 11:25:08,036 sensai.sklearn.sklearn_base:_fit_classifier - Fitting sklearn classifier of type LogisticRegression
+INFO  2024-11-29 11:25:28,230 sensai.vector_model:fit - Fitting completed in 21.05 seconds: SkLearnLogisticRegressionVectorClassificationModel[featureGenerator=MultiFeatureGenerator[featureGenerators=[FeatureGeneratorTakeColumns[columns=[Humidity3pm, Humidity9am], exceptColumns=(), verifyColumnNames=True, name=WEATHER_DEGREES], FeatureGeneratorTakeColumns[columns=[Location, WindGustDir, WindDir9am, WindDir3pm, RainToday], exceptColumns=(), verifyColumnNames=True, name=WEATHER_CATEGORIES], FeatureGeneratorTakeColumns[columns=[MinTemp], exceptColumns=(), verifyColumnNames=True, name=MINTEMP], FeatureGeneratorTakeColumns[columns=[MaxTemp], exceptColumns=(), verifyColumnNames=True, name=MAXTEMP], FeatureGeneratorTakeColumns[columns=[Rainfall], exceptColumns=(), verifyColumnNames=True, name=RAINFALL], FeatureGeneratorTakeColumns[columns=[WindGustSpeed], exceptColumns=(), verifyColumnNames=True, name=WINDGUSTSPEED], FeatureGeneratorTakeColumns[columns=[WindSpeed9am], exceptColumns=(), verifyColumnNames=True, name=WINDSPEED9AM], FeatureGeneratorTakeColumns[columns=[WindSpeed3pm], exceptColumns=(), verifyColumnNames=True, name=WINDSPEED3PM], FeatureGeneratorTakeColumns[columns=[Pressure9am], exceptColumns=(), verifyColumnNames=True, name=PRESSURE9AM], FeatureGeneratorTakeColumns[columns=[Pressure3pm], exceptColumns=(), verifyColumnNames=True, name=PRESSURE3PM], FeatureGeneratorTakeColumns[columns=[Temp9am], exceptColumns=(), verifyColumnNames=True, name=TEMP9AM], FeatureGeneratorTakeColumns[columns=[Temp3pm], exceptColumns=(), verifyColumnNames=True, name=TEMP3PM]]], fitArgs={}, useBalancedClassWeights=False, useLabelEncoding=False, featureGeneratorNames=[WEATHER_DEGREES, WEATHER_CATEGORIES, MINTEMP, MAXTEMP, RAINFALL, WINDGUSTSPEED, WINDSPEED9AM, WINDSPEED3PM, PRESSURE9AM, PRESSURE3PM, TEMP9AM, TEMP3PM], name=LogisticRegression, model=LogisticRegression(max_iter=1000, random_state=42)]
+DEBUG 2024-11-29 11:25:28,233 sensai.featuregen.feature_generator:generate - Generating features with MultiFeatureGenerator[featureGenerators=[FeatureGeneratorTakeColumns[columns=[Humidity3pm, Humidity9am], exceptColumns=(), verifyColumnNames=True, name=WEATHER_DEGREES], FeatureGeneratorTakeColumns[columns=[Location, WindGustDir, WindDir9am, WindDir3pm, RainToday], exceptColumns=(), verifyColumnNames=True, name=WEATHER_CATEGORIES], FeatureGeneratorTakeColumns[columns=[MinTemp], exceptColumns=(), verifyColumnNames=True, name=MINTEMP], FeatureGeneratorTakeColumns[columns=[MaxTemp], exceptColumns=(), verifyColumnNames=True, name=MAXTEMP], FeatureGeneratorTakeColumns[columns=[Rainfall], exceptColumns=(), verifyColumnNames=True, name=RAINFALL], FeatureGeneratorTakeColumns[columns=[WindGustSpeed], exceptColumns=(), verifyColumnNames=True, name=WINDGUSTSPEED], FeatureGeneratorTakeColumns[columns=[WindSpeed9am], exceptColumns=(), verifyColumnNames=True, name=WINDSPEED9AM], FeatureGeneratorTakeColumns[columns=[WindSpeed3pm], exceptColumns=(), verifyColumnNames=True, name=WINDSPEED3PM], FeatureGeneratorTakeColumns[columns=[Pressure9am], exceptColumns=(), verifyColumnNames=True, name=PRESSURE9AM], FeatureGeneratorTakeColumns[columns=[Pressure3pm], exceptColumns=(), verifyColumnNames=True, name=PRESSURE3PM], FeatureGeneratorTakeColumns[columns=[Temp9am], exceptColumns=(), verifyColumnNames=True, name=TEMP9AM], FeatureGeneratorTakeColumns[columns=[Temp3pm], exceptColumns=(), verifyColumnNames=True, name=TEMP3PM]]]
+DEBUG 2024-11-29 11:25:28,233 sensai.featuregen.feature_generator:generate - Generating features with FeatureGeneratorTakeColumns[columns=[Humidity3pm, Humidity9am], exceptColumns=(), verifyColumnNames=True, name=WEATHER_DEGREES]
+DEBUG 2024-11-29 11:25:28,234 sensai.featuregen.feature_generator:generate - Generating features with FeatureGeneratorTakeColumns[columns=[Location, WindGustDir, WindDir9am, WindDir3pm, RainToday], exceptColumns=(), verifyColumnNames=True, name=WEATHER_CATEGORIES]
+DEBUG 2024-11-29 11:25:28,261 sensai.featuregen.feature_generator:generate - Generating features with FeatureGeneratorTakeColumns[columns=[MinTemp], exceptColumns=(), verifyColumnNames=True, name=MINTEMP]
+DEBUG 2024-11-29 11:25:28,262 sensai.featuregen.feature_generator:generate - Generating features with FeatureGeneratorTakeColumns[columns=[MaxTemp], exceptColumns=(), verifyColumnNames=True, name=MAXTEMP]
+DEBUG 2024-11-29 11:25:28,263 sensai.featuregen.feature_generator:generate - Generating features with FeatureGeneratorTakeColumns[columns=[Rainfall], exceptColumns=(), verifyColumnNames=True, name=RAINFALL]
+DEBUG 2024-11-29 11:25:28,264 sensai.featuregen.feature_generator:generate - Generating features with FeatureGeneratorTakeColumns[columns=[WindGustSpeed], exceptColumns=(), verifyColumnNames=True, name=WINDGUSTSPEED]
+DEBUG 2024-11-29 11:25:28,265 sensai.featuregen.feature_generator:generate - Generating features with FeatureGeneratorTakeColumns[columns=[WindSpeed9am], exceptColumns=(), verifyColumnNames=True, name=WINDSPEED9AM]
+DEBUG 2024-11-29 11:25:28,266 sensai.featuregen.feature_generator:generate - Generating features with FeatureGeneratorTakeColumns[columns=[WindSpeed3pm], exceptColumns=(), verifyColumnNames=True, name=WINDSPEED3PM]
+DEBUG 2024-11-29 11:25:28,268 sensai.featuregen.feature_generator:generate - Generating features with FeatureGeneratorTakeColumns[columns=[Pressure9am], exceptColumns=(), verifyColumnNames=True, name=PRESSURE9AM]
+DEBUG 2024-11-29 11:25:28,269 sensai.featuregen.feature_generator:generate - Generating features with FeatureGeneratorTakeColumns[columns=[Pressure3pm], exceptColumns=(), verifyColumnNames=True, name=PRESSURE3PM]
+DEBUG 2024-11-29 11:25:28,270 sensai.featuregen.feature_generator:generate - Generating features with FeatureGeneratorTakeColumns[columns=[Temp9am], exceptColumns=(), verifyColumnNames=True, name=TEMP9AM]
+DEBUG 2024-11-29 11:25:28,271 sensai.featuregen.feature_generator:generate - Generating features with FeatureGeneratorTakeColumns[columns=[Temp3pm], exceptColumns=(), verifyColumnNames=True, name=TEMP3PM]
+INFO  2024-11-29 11:25:29,418 sensai.evaluation.eval_util:gather_results - Evaluation results for RainTomorrow: ClassificationEvalStats[accuracy=0.8536513371509534, balancedAccuracy=0.7325159043552585, precision[Yes]=0.7276896617618956, recall[Yes]=0.5187304181991554, F1[Yes]=0.6056942898043581, N=33878]
+INFO  2024-11-29 11:25:29,421 sensai.util.io.ResultWriter:write_text_file - Saving text file results/rain-tomorrow_full/20241129-112503/LogisticRegression_evaluator-results.txt
+DEBUG 2024-11-29 11:25:29,533 PIL.PngImagePlugin:call - STREAM b'IHDR' 16 13
+DEBUG 2024-11-29 11:25:29,534 PIL.PngImagePlugin:call - STREAM b'sBIT' 41 4
+DEBUG 2024-11-29 11:25:29,534 PIL.PngImagePlugin:_open - b'sBIT' 41 4 (unknown)
+DEBUG 2024-11-29 11:25:29,534 PIL.PngImagePlugin:call - STREAM b'pHYs' 57 9
+DEBUG 2024-11-29 11:25:29,534 PIL.PngImagePlugin:call - STREAM b'IDAT' 78 1189
+DEBUG 2024-11-29 11:25:29,534 PIL.PngImagePlugin:call - STREAM b'IHDR' 16 13
+DEBUG 2024-11-29 11:25:29,535 PIL.PngImagePlugin:call - STREAM b'sBIT' 41 4
+DEBUG 2024-11-29 11:25:29,535 PIL.PngImagePlugin:_open - b'sBIT' 41 4 (unknown)
+DEBUG 2024-11-29 11:25:29,535 PIL.PngImagePlugin:call - STREAM b'pHYs' 57 9
+DEBUG 2024-11-29 11:25:29,535 PIL.PngImagePlugin:call - STREAM b'IDAT' 78 2994
+DEBUG 2024-11-29 11:25:29,548 PIL.PngImagePlugin:call - STREAM b'IHDR' 16 13
+DEBUG 2024-11-29 11:25:29,548 PIL.PngImagePlugin:call - STREAM b'sBIT' 41 4
+DEBUG 2024-11-29 11:25:29,548 PIL.PngImagePlugin:_open - b'sBIT' 41 4 (unknown)
+DEBUG 2024-11-29 11:25:29,548 PIL.PngImagePlugin:call - STREAM b'pHYs' 57 9
+DEBUG 2024-11-29 11:25:29,548 PIL.PngImagePlugin:call - STREAM b'IDAT' 78 374
+DEBUG 2024-11-29 11:25:29,549 PIL.PngImagePlugin:call - STREAM b'IHDR' 16 13
+DEBUG 2024-11-29 11:25:29,550 PIL.PngImagePlugin:call - STREAM b'sBIT' 41 4
+DEBUG 2024-11-29 11:25:29,550 PIL.PngImagePlugin:_open - b'sBIT' 41 4 (unknown)
+DEBUG 2024-11-29 11:25:29,550 PIL.PngImagePlugin:call - STREAM b'pHYs' 57 9
+DEBUG 2024-11-29 11:25:29,550 PIL.PngImagePlugin:call - STREAM b'IDAT' 78 286
+DEBUG 2024-11-29 11:25:29,551 PIL.PngImagePlugin:call - STREAM b'IHDR' 16 13
+DEBUG 2024-11-29 11:25:29,551 PIL.PngImagePlugin:call - STREAM b'sBIT' 41 4
+DEBUG 2024-11-29 11:25:29,551 PIL.PngImagePlugin:_open - b'sBIT' 41 4 (unknown)
+DEBUG 2024-11-29 11:25:29,551 PIL.PngImagePlugin:call - STREAM b'pHYs' 57 9
+DEBUG 2024-11-29 11:25:29,551 PIL.PngImagePlugin:call - STREAM b'IDAT' 78 263
+DEBUG 2024-11-29 11:25:29,553 PIL.PngImagePlugin:call - STREAM b'IHDR' 16 13
+DEBUG 2024-11-29 11:25:29,553 PIL.PngImagePlugin:call - STREAM b'sBIT' 41 4
+DEBUG 2024-11-29 11:25:29,553 PIL.PngImagePlugin:_open - b'sBIT' 41 4 (unknown)
+DEBUG 2024-11-29 11:25:29,553 PIL.PngImagePlugin:call - STREAM b'pHYs' 57 9
+DEBUG 2024-11-29 11:25:29,553 PIL.PngImagePlugin:call - STREAM b'IDAT' 78 387
+DEBUG 2024-11-29 11:25:29,554 PIL.PngImagePlugin:call - STREAM b'IHDR' 16 13
+DEBUG 2024-11-29 11:25:29,554 PIL.PngImagePlugin:call - STREAM b'sBIT' 41 4
+DEBUG 2024-11-29 11:25:29,555 PIL.PngImagePlugin:_open - b'sBIT' 41 4 (unknown)
+DEBUG 2024-11-29 11:25:29,555 PIL.PngImagePlugin:call - STREAM b'pHYs' 57 9
+DEBUG 2024-11-29 11:25:29,555 PIL.PngImagePlugin:call - STREAM b'IDAT' 78 436
+DEBUG 2024-11-29 11:25:29,556 PIL.PngImagePlugin:call - STREAM b'IHDR' 16 13
+DEBUG 2024-11-29 11:25:29,556 PIL.PngImagePlugin:call - STREAM b'sBIT' 41 4
+DEBUG 2024-11-29 11:25:29,556 PIL.PngImagePlugin:_open - b'sBIT' 41 4 (unknown)
+DEBUG 2024-11-29 11:25:29,556 PIL.PngImagePlugin:call - STREAM b'pHYs' 57 9
+DEBUG 2024-11-29 11:25:29,556 PIL.PngImagePlugin:call - STREAM b'IDAT' 78 351
+DEBUG 2024-11-29 11:25:29,557 PIL.PngImagePlugin:call - STREAM b'IHDR' 16 13
+DEBUG 2024-11-29 11:25:29,557 PIL.PngImagePlugin:call - STREAM b'sBIT' 41 4
+DEBUG 2024-11-29 11:25:29,558 PIL.PngImagePlugin:_open - b'sBIT' 41 4 (unknown)
+DEBUG 2024-11-29 11:25:29,558 PIL.PngImagePlugin:call - STREAM b'pHYs' 57 9
+DEBUG 2024-11-29 11:25:29,558 PIL.PngImagePlugin:call - STREAM b'IDAT' 78 364
+INFO  2024-11-29 11:25:29,629 sensai.util.io.ResultWriter:write_figure - Saving figure results/rain-tomorrow_full/20241129-112503/LogisticRegression_confusion-matrix-rel.png
+DEBUG 2024-11-29 11:25:30,060 PIL.PngImagePlugin:call - STREAM b'IHDR' 16 13
+DEBUG 2024-11-29 11:25:30,060 PIL.PngImagePlugin:call - STREAM b'sBIT' 41 4
+DEBUG 2024-11-29 11:25:30,060 PIL.PngImagePlugin:_open - b'sBIT' 41 4 (unknown)
+DEBUG 2024-11-29 11:25:30,060 PIL.PngImagePlugin:call - STREAM b'pHYs' 57 9
+DEBUG 2024-11-29 11:25:30,060 PIL.PngImagePlugin:call - STREAM b'IDAT' 78 1189
+DEBUG 2024-11-29 11:25:30,061 PIL.PngImagePlugin:call - STREAM b'IHDR' 16 13
+DEBUG 2024-11-29 11:25:30,061 PIL.PngImagePlugin:call - STREAM b'sBIT' 41 4
+DEBUG 2024-11-29 11:25:30,061 PIL.PngImagePlugin:_open - b'sBIT' 41 4 (unknown)
+DEBUG 2024-11-29 11:25:30,061 PIL.PngImagePlugin:call - STREAM b'pHYs' 57 9
+DEBUG 2024-11-29 11:25:30,061 PIL.PngImagePlugin:call - STREAM b'IDAT' 78 2994
+DEBUG 2024-11-29 11:25:30,075 PIL.PngImagePlugin:call - STREAM b'IHDR' 16 13
+DEBUG 2024-11-29 11:25:30,075 PIL.PngImagePlugin:call - STREAM b'sBIT' 41 4
+DEBUG 2024-11-29 11:25:30,075 PIL.PngImagePlugin:_open - b'sBIT' 41 4 (unknown)
+DEBUG 2024-11-29 11:25:30,075 PIL.PngImagePlugin:call - STREAM b'pHYs' 57 9
+DEBUG 2024-11-29 11:25:30,075 PIL.PngImagePlugin:call - STREAM b'IDAT' 78 374
+DEBUG 2024-11-29 11:25:30,076 PIL.PngImagePlugin:call - STREAM b'IHDR' 16 13
+DEBUG 2024-11-29 11:25:30,076 PIL.PngImagePlugin:call - STREAM b'sBIT' 41 4
+DEBUG 2024-11-29 11:25:30,076 PIL.PngImagePlugin:_open - b'sBIT' 41 4 (unknown)
+DEBUG 2024-11-29 11:25:30,076 PIL.PngImagePlugin:call - STREAM b'pHYs' 57 9
+DEBUG 2024-11-29 11:25:30,076 PIL.PngImagePlugin:call - STREAM b'IDAT' 78 286
+DEBUG 2024-11-29 11:25:30,078 PIL.PngImagePlugin:call - STREAM b'IHDR' 16 13
+DEBUG 2024-11-29 11:25:30,078 PIL.PngImagePlugin:call - STREAM b'sBIT' 41 4
+DEBUG 2024-11-29 11:25:30,078 PIL.PngImagePlugin:_open - b'sBIT' 41 4 (unknown)
+DEBUG 2024-11-29 11:25:30,078 PIL.PngImagePlugin:call - STREAM b'pHYs' 57 9
+DEBUG 2024-11-29 11:25:30,078 PIL.PngImagePlugin:call - STREAM b'IDAT' 78 263
+DEBUG 2024-11-29 11:25:30,080 PIL.PngImagePlugin:call - STREAM b'IHDR' 16 13
+DEBUG 2024-11-29 11:25:30,080 PIL.PngImagePlugin:call - STREAM b'sBIT' 41 4
+DEBUG 2024-11-29 11:25:30,080 PIL.PngImagePlugin:_open - b'sBIT' 41 4 (unknown)
+DEBUG 2024-11-29 11:25:30,080 PIL.PngImagePlugin:call - STREAM b'pHYs' 57 9
+DEBUG 2024-11-29 11:25:30,080 PIL.PngImagePlugin:call - STREAM b'IDAT' 78 387
+DEBUG 2024-11-29 11:25:30,081 PIL.PngImagePlugin:call - STREAM b'IHDR' 16 13
+DEBUG 2024-11-29 11:25:30,081 PIL.PngImagePlugin:call - STREAM b'sBIT' 41 4
+DEBUG 2024-11-29 11:25:30,081 PIL.PngImagePlugin:_open - b'sBIT' 41 4 (unknown)
+DEBUG 2024-11-29 11:25:30,081 PIL.PngImagePlugin:call - STREAM b'pHYs' 57 9
+DEBUG 2024-11-29 11:25:30,082 PIL.PngImagePlugin:call - STREAM b'IDAT' 78 436
+DEBUG 2024-11-29 11:25:30,083 PIL.PngImagePlugin:call - STREAM b'IHDR' 16 13
+DEBUG 2024-11-29 11:25:30,083 PIL.PngImagePlugin:call - STREAM b'sBIT' 41 4
+DEBUG 2024-11-29 11:25:30,083 PIL.PngImagePlugin:_open - b'sBIT' 41 4 (unknown)
+DEBUG 2024-11-29 11:25:30,083 PIL.PngImagePlugin:call - STREAM b'pHYs' 57 9
+DEBUG 2024-11-29 11:25:30,083 PIL.PngImagePlugin:call - STREAM b'IDAT' 78 351
+DEBUG 2024-11-29 11:25:30,085 PIL.PngImagePlugin:call - STREAM b'IHDR' 16 13
+DEBUG 2024-11-29 11:25:30,085 PIL.PngImagePlugin:call - STREAM b'sBIT' 41 4
+DEBUG 2024-11-29 11:25:30,085 PIL.PngImagePlugin:_open - b'sBIT' 41 4 (unknown)
+DEBUG 2024-11-29 11:25:30,085 PIL.PngImagePlugin:call - STREAM b'pHYs' 57 9
+DEBUG 2024-11-29 11:25:30,085 PIL.PngImagePlugin:call - STREAM b'IDAT' 78 364
+INFO  2024-11-29 11:25:30,148 sensai.util.io.ResultWriter:write_figure - Saving figure results/rain-tomorrow_full/20241129-112503/LogisticRegression_confusion-matrix-abs.png

@@ -1,0 +1,108 @@
+INFO  2024-11-29 11:25:03,325 sensai.util.logging:add_file_logger - Logging to results/rain-tomorrow_full/20241129-112503/log.txt ...
+INFO  2024-11-29 11:25:03,325 raintomorrow.data:load_data_frame - Loading Dataset[num_samples=None, random_seed=42, class_positive=Yes, class_negative=No] from ../data/weatherAUS.csv
+INFO  2024-11-29 11:25:03,751 sensai.evaluation.eval_util:compare_models - Evaluating model 1/10 named 'LogisticRegression-orig' ...
+DEBUG 2024-11-29 11:25:03,787 sensai.evaluation.evaluator:__init__ - <sensai.data.DataSplitterFractional object at 0x7f9abba7f400> created split with 79047 (70.00%) and 33878 (30.00%) training and test data points respectively
+INFO  2024-11-29 11:25:03,787 sensai.evaluation.eval_util:perform_simple_evaluation - Evaluating SkLearnLogisticRegressionVectorClassificationModel[featureGenerator=FeatureGeneratorTakeColumns[columns=[MinTemp, MaxTemp, Rainfall, WindGustSpeed, WindSpeed9am, WindSpeed3pm, Humidity9am, Humidity3pm, Pressure9am, Pressure3pm, Temp9am, Temp3pm], exceptColumns=(), verifyColumnNames=True, name=FeatureGeneratorTakeColumns-140302566993552], fitArgs={}, useBalancedClassWeights=False, useLabelEncoding=False, featureGeneratorNames=[FeatureGeneratorTakeColumns-140302566993552], name=LogisticRegression-orig, modelConstructor=LogisticRegression(random_state=42, solver=lbfgs, max_iter=1000)] via <sensai.evaluation.evaluator.VectorClassificationModelEvaluator object at 0x7f9abba7f3d0>
+DEBUG 2024-11-29 11:25:03,843 git.cmd:execute - Popen(['git', 'version'], cwd=/home/kai/Git/rainPredictionAustralia/refactoring-journey, universal_newlines=False, shell=None, istream=None)
+DEBUG 2024-11-29 11:25:03,845 git.cmd:execute - Popen(['git', 'version'], cwd=/home/kai/Git/rainPredictionAustralia/refactoring-journey, universal_newlines=False, shell=None, istream=None)
+DEBUG 2024-11-29 11:25:03,849 git.cmd:execute - Popen(['git', 'cat-file', '--batch-check'], cwd=/home/kai/Git/rainPredictionAustralia, universal_newlines=False, shell=None, istream=<valid stream>)
+INFO  2024-11-29 11:25:03,860 sensai.vector_model:fit - Fitting SkLearnLogisticRegressionVectorClassificationModel instance
+DEBUG 2024-11-29 11:25:03,860 sensai.featuregen.feature_generator:generate - Generating features with FeatureGeneratorTakeColumns[columns=[MinTemp, MaxTemp, Rainfall, WindGustSpeed, WindSpeed9am, WindSpeed3pm, Humidity9am, Humidity3pm, Pressure9am, Pressure3pm, Temp9am, Temp3pm], exceptColumns=(), verifyColumnNames=True, name=FeatureGeneratorTakeColumns-140302566993552]
+DEBUG 2024-11-29 11:25:03,884 sensai.vector_model:fit - Fitting with outputs[1]=['RainTomorrow'], inputs[12]=[MinTemp/float64, MaxTemp/float64, Rainfall/float64, WindGustSpeed/float64, WindSpeed9am/float64, WindSpeed3pm/float64, Humidity9am/float64, Humidity3pm/float64, Pressure9am/float64, Pressure3pm/float64, Temp9am/float64, Temp3pm/float64]; N=79047 data points
+INFO  2024-11-29 11:25:03,887 sensai.sklearn.sklearn_base:_fit_classifier - Fitting sklearn classifier of type LogisticRegression
+INFO  2024-11-29 11:25:04,360 sensai.vector_model:fit - Fitting completed in 0.49 seconds: SkLearnLogisticRegressionVectorClassificationModel[featureGenerator=FeatureGeneratorTakeColumns[columns=[MinTemp, MaxTemp, Rainfall, WindGustSpeed, WindSpeed9am, WindSpeed3pm, Humidity9am, Humidity3pm, Pressure9am, Pressure3pm, Temp9am, Temp3pm], exceptColumns=(), verifyColumnNames=True, name=FeatureGeneratorTakeColumns-140302566993552], fitArgs={}, useBalancedClassWeights=False, useLabelEncoding=False, featureGeneratorNames=[FeatureGeneratorTakeColumns-140302566993552], name=LogisticRegression-orig, model=LogisticRegression(max_iter=1000, random_state=42)]
+DEBUG 2024-11-29 11:25:04,360 sensai.featuregen.feature_generator:generate - Generating features with FeatureGeneratorTakeColumns[columns=[MinTemp, MaxTemp, Rainfall, WindGustSpeed, WindSpeed9am, WindSpeed3pm, Humidity9am, Humidity3pm, Pressure9am, Pressure3pm, Temp9am, Temp3pm], exceptColumns=(), verifyColumnNames=True, name=FeatureGeneratorTakeColumns-140302566993552]
+INFO  2024-11-29 11:25:05,346 sensai.evaluation.eval_util:gather_results - Evaluation results for RainTomorrow: ClassificationEvalStats[accuracy=0.8492236849873074, balancedAccuracy=0.7209690497650054, precision[Yes]=0.7220123284947305, recall[Yes]=0.49461926168096987, F1[Yes]=0.5870654810024253, N=33878]
+INFO  2024-11-29 11:25:05,347 sensai.util.io.ResultWriter:write_text_file - Saving text file results/rain-tomorrow_full/20241129-112503/LogisticRegression-orig_evaluator-results.txt
+DEBUG 2024-11-29 11:25:05,754 PIL.PngImagePlugin:call - STREAM b'IHDR' 16 13
+DEBUG 2024-11-29 11:25:05,754 PIL.PngImagePlugin:call - STREAM b'sBIT' 41 4
+DEBUG 2024-11-29 11:25:05,754 PIL.PngImagePlugin:_open - b'sBIT' 41 4 (unknown)
+DEBUG 2024-11-29 11:25:05,754 PIL.PngImagePlugin:call - STREAM b'pHYs' 57 9
+DEBUG 2024-11-29 11:25:05,754 PIL.PngImagePlugin:call - STREAM b'IDAT' 78 1189
+DEBUG 2024-11-29 11:25:05,756 PIL.PngImagePlugin:call - STREAM b'IHDR' 16 13
+DEBUG 2024-11-29 11:25:05,756 PIL.PngImagePlugin:call - STREAM b'sBIT' 41 4
+DEBUG 2024-11-29 11:25:05,756 PIL.PngImagePlugin:_open - b'sBIT' 41 4 (unknown)
+DEBUG 2024-11-29 11:25:05,756 PIL.PngImagePlugin:call - STREAM b'pHYs' 57 9
+DEBUG 2024-11-29 11:25:05,756 PIL.PngImagePlugin:call - STREAM b'IDAT' 78 2994
+DEBUG 2024-11-29 11:25:05,774 PIL.PngImagePlugin:call - STREAM b'IHDR' 16 13
+DEBUG 2024-11-29 11:25:05,774 PIL.PngImagePlugin:call - STREAM b'sBIT' 41 4
+DEBUG 2024-11-29 11:25:05,774 PIL.PngImagePlugin:_open - b'sBIT' 41 4 (unknown)
+DEBUG 2024-11-29 11:25:05,774 PIL.PngImagePlugin:call - STREAM b'pHYs' 57 9
+DEBUG 2024-11-29 11:25:05,774 PIL.PngImagePlugin:call - STREAM b'IDAT' 78 374
+DEBUG 2024-11-29 11:25:05,775 PIL.PngImagePlugin:call - STREAM b'IHDR' 16 13
+DEBUG 2024-11-29 11:25:05,775 PIL.PngImagePlugin:call - STREAM b'sBIT' 41 4
+DEBUG 2024-11-29 11:25:05,775 PIL.PngImagePlugin:_open - b'sBIT' 41 4 (unknown)
+DEBUG 2024-11-29 11:25:05,775 PIL.PngImagePlugin:call - STREAM b'pHYs' 57 9
+DEBUG 2024-11-29 11:25:05,776 PIL.PngImagePlugin:call - STREAM b'IDAT' 78 286
+DEBUG 2024-11-29 11:25:05,777 PIL.PngImagePlugin:call - STREAM b'IHDR' 16 13
+DEBUG 2024-11-29 11:25:05,777 PIL.PngImagePlugin:call - STREAM b'sBIT' 41 4
+DEBUG 2024-11-29 11:25:05,777 PIL.PngImagePlugin:_open - b'sBIT' 41 4 (unknown)
+DEBUG 2024-11-29 11:25:05,777 PIL.PngImagePlugin:call - STREAM b'pHYs' 57 9
+DEBUG 2024-11-29 11:25:05,777 PIL.PngImagePlugin:call - STREAM b'IDAT' 78 263
+DEBUG 2024-11-29 11:25:05,779 PIL.PngImagePlugin:call - STREAM b'IHDR' 16 13
+DEBUG 2024-11-29 11:25:05,780 PIL.PngImagePlugin:call - STREAM b'sBIT' 41 4
+DEBUG 2024-11-29 11:25:05,780 PIL.PngImagePlugin:_open - b'sBIT' 41 4 (unknown)
+DEBUG 2024-11-29 11:25:05,780 PIL.PngImagePlugin:call - STREAM b'pHYs' 57 9
+DEBUG 2024-11-29 11:25:05,780 PIL.PngImagePlugin:call - STREAM b'IDAT' 78 387
+DEBUG 2024-11-29 11:25:05,781 PIL.PngImagePlugin:call - STREAM b'IHDR' 16 13
+DEBUG 2024-11-29 11:25:05,781 PIL.PngImagePlugin:call - STREAM b'sBIT' 41 4
+DEBUG 2024-11-29 11:25:05,781 PIL.PngImagePlugin:_open - b'sBIT' 41 4 (unknown)
+DEBUG 2024-11-29 11:25:05,781 PIL.PngImagePlugin:call - STREAM b'pHYs' 57 9
+DEBUG 2024-11-29 11:25:05,782 PIL.PngImagePlugin:call - STREAM b'IDAT' 78 436
+DEBUG 2024-11-29 11:25:05,783 PIL.PngImagePlugin:call - STREAM b'IHDR' 16 13
+DEBUG 2024-11-29 11:25:05,783 PIL.PngImagePlugin:call - STREAM b'sBIT' 41 4
+DEBUG 2024-11-29 11:25:05,783 PIL.PngImagePlugin:_open - b'sBIT' 41 4 (unknown)
+DEBUG 2024-11-29 11:25:05,783 PIL.PngImagePlugin:call - STREAM b'pHYs' 57 9
+DEBUG 2024-11-29 11:25:05,783 PIL.PngImagePlugin:call - STREAM b'IDAT' 78 351
+DEBUG 2024-11-29 11:25:05,785 PIL.PngImagePlugin:call - STREAM b'IHDR' 16 13
+DEBUG 2024-11-29 11:25:05,785 PIL.PngImagePlugin:call - STREAM b'sBIT' 41 4
+DEBUG 2024-11-29 11:25:05,785 PIL.PngImagePlugin:_open - b'sBIT' 41 4 (unknown)
+DEBUG 2024-11-29 11:25:05,785 PIL.PngImagePlugin:call - STREAM b'pHYs' 57 9
+DEBUG 2024-11-29 11:25:05,785 PIL.PngImagePlugin:call - STREAM b'IDAT' 78 364
+INFO  2024-11-29 11:25:05,876 sensai.util.io.ResultWriter:write_figure - Saving figure results/rain-tomorrow_full/20241129-112503/LogisticRegression-orig_confusion-matrix-rel.png
+DEBUG 2024-11-29 11:25:06,319 PIL.PngImagePlugin:call - STREAM b'IHDR' 16 13
+DEBUG 2024-11-29 11:25:06,319 PIL.PngImagePlugin:call - STREAM b'sBIT' 41 4
+DEBUG 2024-11-29 11:25:06,319 PIL.PngImagePlugin:_open - b'sBIT' 41 4 (unknown)
+DEBUG 2024-11-29 11:25:06,319 PIL.PngImagePlugin:call - STREAM b'pHYs' 57 9
+DEBUG 2024-11-29 11:25:06,319 PIL.PngImagePlugin:call - STREAM b'IDAT' 78 1189
+DEBUG 2024-11-29 11:25:06,320 PIL.PngImagePlugin:call - STREAM b'IHDR' 16 13
+DEBUG 2024-11-29 11:25:06,320 PIL.PngImagePlugin:call - STREAM b'sBIT' 41 4
+DEBUG 2024-11-29 11:25:06,320 PIL.PngImagePlugin:_open - b'sBIT' 41 4 (unknown)
+DEBUG 2024-11-29 11:25:06,320 PIL.PngImagePlugin:call - STREAM b'pHYs' 57 9
+DEBUG 2024-11-29 11:25:06,320 PIL.PngImagePlugin:call - STREAM b'IDAT' 78 2994
+DEBUG 2024-11-29 11:25:06,334 PIL.PngImagePlugin:call - STREAM b'IHDR' 16 13
+DEBUG 2024-11-29 11:25:06,334 PIL.PngImagePlugin:call - STREAM b'sBIT' 41 4
+DEBUG 2024-11-29 11:25:06,334 PIL.PngImagePlugin:_open - b'sBIT' 41 4 (unknown)
+DEBUG 2024-11-29 11:25:06,334 PIL.PngImagePlugin:call - STREAM b'pHYs' 57 9
+DEBUG 2024-11-29 11:25:06,334 PIL.PngImagePlugin:call - STREAM b'IDAT' 78 374
+DEBUG 2024-11-29 11:25:06,335 PIL.PngImagePlugin:call - STREAM b'IHDR' 16 13
+DEBUG 2024-11-29 11:25:06,335 PIL.PngImagePlugin:call - STREAM b'sBIT' 41 4
+DEBUG 2024-11-29 11:25:06,335 PIL.PngImagePlugin:_open - b'sBIT' 41 4 (unknown)
+DEBUG 2024-11-29 11:25:06,335 PIL.PngImagePlugin:call - STREAM b'pHYs' 57 9
+DEBUG 2024-11-29 11:25:06,335 PIL.PngImagePlugin:call - STREAM b'IDAT' 78 286
+DEBUG 2024-11-29 11:25:06,336 PIL.PngImagePlugin:call - STREAM b'IHDR' 16 13
+DEBUG 2024-11-29 11:25:06,336 PIL.PngImagePlugin:call - STREAM b'sBIT' 41 4
+DEBUG 2024-11-29 11:25:06,337 PIL.PngImagePlugin:_open - b'sBIT' 41 4 (unknown)
+DEBUG 2024-11-29 11:25:06,337 PIL.PngImagePlugin:call - STREAM b'pHYs' 57 9
+DEBUG 2024-11-29 11:25:06,337 PIL.PngImagePlugin:call - STREAM b'IDAT' 78 263
+DEBUG 2024-11-29 11:25:06,338 PIL.PngImagePlugin:call - STREAM b'IHDR' 16 13
+DEBUG 2024-11-29 11:25:06,338 PIL.PngImagePlugin:call - STREAM b'sBIT' 41 4
+DEBUG 2024-11-29 11:25:06,339 PIL.PngImagePlugin:_open - b'sBIT' 41 4 (unknown)
+DEBUG 2024-11-29 11:25:06,339 PIL.PngImagePlugin:call - STREAM b'pHYs' 57 9
+DEBUG 2024-11-29 11:25:06,339 PIL.PngImagePlugin:call - STREAM b'IDAT' 78 387
+DEBUG 2024-11-29 11:25:06,340 PIL.PngImagePlugin:call - STREAM b'IHDR' 16 13
+DEBUG 2024-11-29 11:25:06,340 PIL.PngImagePlugin:call - STREAM b'sBIT' 41 4
+DEBUG 2024-11-29 11:25:06,340 PIL.PngImagePlugin:_open - b'sBIT' 41 4 (unknown)
+DEBUG 2024-11-29 11:25:06,340 PIL.PngImagePlugin:call - STREAM b'pHYs' 57 9
+DEBUG 2024-11-29 11:25:06,340 PIL.PngImagePlugin:call - STREAM b'IDAT' 78 436
+DEBUG 2024-11-29 11:25:06,341 PIL.PngImagePlugin:call - STREAM b'IHDR' 16 13
+DEBUG 2024-11-29 11:25:06,342 PIL.PngImagePlugin:call - STREAM b'sBIT' 41 4
+DEBUG 2024-11-29 11:25:06,342 PIL.PngImagePlugin:_open - b'sBIT' 41 4 (unknown)
+DEBUG 2024-11-29 11:25:06,342 PIL.PngImagePlugin:call - STREAM b'pHYs' 57 9
+DEBUG 2024-11-29 11:25:06,342 PIL.PngImagePlugin:call - STREAM b'IDAT' 78 351
+DEBUG 2024-11-29 11:25:06,343 PIL.PngImagePlugin:call - STREAM b'IHDR' 16 13
+DEBUG 2024-11-29 11:25:06,343 PIL.PngImagePlugin:call - STREAM b'sBIT' 41 4
+DEBUG 2024-11-29 11:25:06,343 PIL.PngImagePlugin:_open - b'sBIT' 41 4 (unknown)
+DEBUG 2024-11-29 11:25:06,343 PIL.PngImagePlugin:call - STREAM b'pHYs' 57 9
+DEBUG 2024-11-29 11:25:06,343 PIL.PngImagePlugin:call - STREAM b'IDAT' 78 364
+INFO  2024-11-29 11:25:06,409 sensai.util.io.ResultWriter:write_figure - Saving figure results/rain-tomorrow_full/20241129-112503/LogisticRegression-orig_confusion-matrix-abs.png

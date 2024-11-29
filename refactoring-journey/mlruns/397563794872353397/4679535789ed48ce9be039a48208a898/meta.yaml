@@ -1,0 +1,15 @@
+artifact_uri: file:///home/kai/Git/rainPredictionAustralia/refactoring-journey/mlruns/397563794872353397/4679535789ed48ce9be039a48208a898/artifacts
+end_time: 1732876052947
+entry_point_name: ''
+experiment_id: '397563794872353397'
+lifecycle_stage: active
+run_id: 4679535789ed48ce9be039a48208a898
+run_name: 20241129-112503-NeuralNetwork
+run_uuid: 4679535789ed48ce9be039a48208a898
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1732876018160
+status: 3
+tags: []
+user_id: kai

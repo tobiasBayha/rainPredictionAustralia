@@ -13,5 +13,4 @@ def csv_data_path() -> Path:
     for folder in (cwd, cwd / '..'):
         data_folder = folder / 'data'
         if data_folder.exists() and data_folder.is_dir():
-            #print('true')
             return data_folder / 'weatherAUS.csv'

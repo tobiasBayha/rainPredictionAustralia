@@ -3,7 +3,7 @@ from typing import Optional
 
 import pandas as pd
 from sensai import InputOutputData
-from sensai.util.string import ToStringMixin
+from sensai.util.string import ToStringMixin, TagBuilder
 
 from . import config
 
@@ -49,6 +49,12 @@ class Dataset(ToStringMixin):
         self.class_positive = CLASS_RAIN_TOMORROW
         self.class_negative = CLASS_NO_RAIN_TOMORROW
 
+    def tag(self):
+        return TagBuilder(glue="-") \
+            .with_alternative(self.num_samples is None, "full", f"numSample{self.num_samples}") \
+            .with_conditional(self.random_seed != 42, f"seed{self.random_seed}") \
+            .build()
+
     def load_data_frame(self) -> pd.DataFrame:
         """
         :return: the dataframe with removed columns and removed missing data
@@ -56,10 +62,9 @@ class Dataset(ToStringMixin):
 
         csv_path = config.csv_data_path()
         log.info(f"Loading {self} from {csv_path}")
-        df=pd.read_csv(csv_path).dropna()
-
-        #df = df.drop(columns=COLS_DROP_LIST)
-        #df = df.dropna()
+        df=pd.read_csv(csv_path)
+        df = df.drop(columns=COLS_DROP_LIST)
+        df = df.dropna()
 
         if self.num_samples is not None:
             df = df.sample(self.num_samples, random_state=self.random_seed)
