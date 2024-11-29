@@ -1,18 +1,14 @@
-from sklearn.metrics import classification_report, confusion_matrix
-from sklearn.model_selection import train_test_split
+from sensai.evaluation import ClassificationEvaluatorParams, ClassificationModelEvaluation
+from sensai.util import logging
 
 from raintomorrow.data import Dataset
 from raintomorrow.model_factory import ModelFactory
 
 
-if __name__ == '__main__':
+def main():
     # define & load dataset
     dataset = Dataset()
-    X,y = dataset.load_xy()
-    y = y.to_frame()
-
-    # split the data
-    X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=42, test_size=0.2, shuffle=True)
+    io_data = dataset.load_io_data()
 
     # define models to be evaluated
     models = [
@@ -28,10 +24,14 @@ if __name__ == '__main__':
         ModelFactory.create_Neural_Network()
     ]
 
-    # evaluate models
-    for model in models:
-        print(f"Evaluating model:\n{model}")
-        model.fit(X_train, y_train)
-        y_pred = model.predict(X_test)
-        print(confusion_matrix(y_test, y_pred))
-        print(classification_report(y_test, y_pred))
+    # declare parameters to be used for evaluation, i.e. how to split the data (fraction and random seed)
+    evaluator_params = ClassificationEvaluatorParams(fractional_split_test_fraction=0.3,
+                                                     fractional_split_random_seed=42,
+                                                     binary_positive_label=dataset.class_positive)
+
+    # use a high-level utility class for evaluating the models based on these parameters
+    ev = ClassificationModelEvaluation(io_data, evaluator_params=evaluator_params)
+    ev.compare_models(models, fit_models=True)
+
+if __name__ == '__main__':
+    logging.run_main(main)

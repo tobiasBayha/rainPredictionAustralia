@@ -1,8 +1,13 @@
-from typing import Tuple, Optional
+import logging
+from typing import Optional
 
 import pandas as pd
+from sensai import InputOutputData
+from sensai.util.string import ToStringMixin
 
 from . import config
+
+log = logging.getLogger(__name__)
 
 COL_DATE = 'Date'
 COL_LOCATION = 'Location'
@@ -28,36 +33,41 @@ COL_TEMP3PM = 'Temp3pm'
 COL_RAINTODAY = 'RainToday'
 COL_RAINTOMORROW = 'RainTomorrow'
 
+CLASS_RAIN_TOMORROW = 'Yes'
+CLASS_NO_RAIN_TOMORROW = 'No'
+
 COLS_WEATHER_CATEGORIES = [COL_LOCATION, COL_WINDGUSTDIR, COL_WINDIR9AM, COL_WINDIR3PM, COL_RAINTODAY]
 COLS_WEATHER_DEGREES = [COL_HUMIDITY3PM, COL_HUMIDITY9AM, ]
 COLS_DROP_LIST = [COL_EVAPORATION, COL_SUNSHINE, COL_CLOUD9AM, COL_CLOUD3PM]
 
 
-class Dataset:
+class Dataset(ToStringMixin):
     def __init__(self, num_samples: Optional[int] = None, random_seed: int =42):
 
         self.num_samples = num_samples
         self.random_seed = random_seed
+        self.class_positive = CLASS_RAIN_TOMORROW
+        self.class_negative = CLASS_NO_RAIN_TOMORROW
 
     def load_data_frame(self) -> pd.DataFrame:
         """
-        :return: the full DataFrame with all columns
+        :return: the dataframe with removed columns and removed missing data
         """
-        df=pd.read_csv(config.csv_data_path())
+
+        csv_path = config.csv_data_path()
+        log.info(f"Loading {self} from {csv_path}")
+        df=pd.read_csv(csv_path).dropna()
+
+        #df = df.drop(columns=COLS_DROP_LIST)
+        #df = df.dropna()
+
+        if self.num_samples is not None:
+            df = df.sample(self.num_samples, random_state=self.random_seed)
         return df
 
-    def data_frame_cleanup(self) -> pd.DataFrame:
-        """
-        :return: a cleaned up DataFrame with less missing Data
-        """
-        df=self.load_data_frame()
-        df=df.drop(columns=COLS_DROP_LIST)
-        return df.dropna()
 
-    def load_xy(self) -> Tuple[pd.DataFrame, pd.Series]:
+    def load_io_data(self) -> InputOutputData:
         """
-        :return: a pair (X, y) where X is the data frame containing all attributes and y is the corresponding series of class values
+        :return: the I/O data
         """
-        #df=self.load_data_frame()
-        df = self.data_frame_cleanup()
-        return df.drop(columns=COL_RAINTOMORROW), df[COL_RAINTOMORROW]
+        return InputOutputData.from_data_frame(self.load_data_frame(), COL_RAINTOMORROW)
